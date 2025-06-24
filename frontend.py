@@ -93,7 +93,7 @@ st.markdown(f"## 🛒 Product: {product}")
 # === Product Image ===
 from pathlib import Path
 
-image_path = Path("images") / f"{product}.jpg"
+image_path = Path("images") / f"{product}.png"
 
 if image_path.exists():
     st.image(str(image_path), caption=product, use_column_width="always")
