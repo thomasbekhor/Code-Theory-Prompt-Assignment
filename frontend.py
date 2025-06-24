@@ -96,7 +96,7 @@ from pathlib import Path
 image_path = Path("images") / f"{product}.png"
 
 if image_path.exists():
-    st.image(str(image_path), caption=product, use_column_width=True)
+    st.image(str(image_path), caption=product, use_container_width=True)
 else:
     st.info("No image available for this product.")
 
