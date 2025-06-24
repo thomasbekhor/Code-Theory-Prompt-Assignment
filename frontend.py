@@ -86,7 +86,6 @@ st.markdown('<p class="subtitle">Deep insights powered by GPT & interactive visu
 # === Category and Manufacturer ===
 manufacturer = df[df['name_clean'] == product]['manufacturer'].dropna().unique()
 
-st.markdown(f"**Category:** {category[0] if len(category) > 0 else 'N/A'}")
 st.markdown(f"**Manufacturer:** {manufacturer[0] if len(manufacturer) > 0 else 'N/A'}")
 
 # === Collapsible GPT summaries ===
