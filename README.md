@@ -8,9 +8,9 @@ A creative AI-powered experience that turns chaotic Amazon product reviews into 
 ## 👋 About This Project
 
 This project started with a simple question:  
-**How can messy customer feedback be transformed into something useful, insightful — maybe even beautiful?**
+**How can messy databases — filled with noise, contradictions, and scattered opinions — be transformed into something useful, insightful, and maybe even beautiful?**
 
-The result is an Streamlit app that surfaces product stories, user sentiments, and data-driven insights in a human-centered way using AI to analyze the users reviews..
+The result is an Streamlit app that surfaces product stories, user sentiments, and data-driven insights in a human-centered way using AI to analyze the users reviews.
 
 ---
 
@@ -26,7 +26,7 @@ Explore products like the Kindle Oasis, Fire HD, or Echo, and let AI reveal what
 
 ### 1. 🧹 Data Exploration & Brainstorming
 
-I began by cleaning and exploring a Kaggle dataset of Amazon reviews using `pandas`. After analyzing the ocntent I selected key variables like:
+I began by cleaning and exploring a Kaggle dataset of Amazon reviews using `pandas`. After analyzing the content, I selected key variables like:
 - `name`
 - `brand`
 - `categories`
@@ -38,11 +38,11 @@ I began by cleaning and exploring a Kaggle dataset of Amazon reviews using `pand
 
 This informed early design questions:
 - What matters to users when choosing a product?
-- What would help designers or marketers understand perception?
-- How can insights feel alive — not just analytical?
+- How can I help designers or marketers understand concise perceptions of the products based on the reviews?
+- How can the interface feel alive — not just analytical?
 
 These ideas shaped the interface design:  
-**Product selection → Time filters → Visuals → GPT insights → Creative remix tools**
+**Product selection → Product description and overview → GPT analysis (pros, cons and insights)
 
 To simplify the user experience and reduce redundancy, I used GPT to analyze and group technically similar product variants. This helped consolidate scattered listings into 5 unified products:
 
@@ -86,7 +86,7 @@ Finally, I deployed the app to Streamlit Cloud for live access.
 | 📅 **Time-Based Filtering** | Interactive filters by year and multiple months in the side bar |
 | 📊 **Rating Distribution** | Histogram of review scores over selected periods |
 | 📈 **Sentiment Over Time** | Line graph of average rating by month |
-| 📊 **Sentiment Over Time** | Most helpful comments of each product from the database  |
+| 📊 **Most Helpful Comments** | Most helpful comments of each product from the database  |
 
 ---
 
