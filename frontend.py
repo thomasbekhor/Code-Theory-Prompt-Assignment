@@ -20,10 +20,6 @@ df['year_month'] = df['reviews.date'].dt.to_period('M').astype(str)
 # === Sidebar ===
 st.sidebar.title("🛍️ Product Selection")
 
-product = st.sidebar.selectbox(
-    "Select a product",
-    sorted(df['name_clean'].dropna().unique())
-)
 products = sorted(df['name_clean'].dropna().unique())
 default_product = "Kindle Oasis"  # substitua pelo produto que quiser
 
@@ -91,9 +87,21 @@ st.markdown(
 st.markdown('<h1 class="title">📚✨ Product Reviews Explorer</h1>', unsafe_allow_html=True)
 st.markdown('<p class="subtitle">Deep insights powered by GPT & interactive visualizations</p>', unsafe_allow_html=True)
 
+# === Product Info Header ===
+st.markdown(f"## 🛒 Product: {product}")
+
+# === Product Image ===
+from pathlib import Path
+
+image_path = Path("images") / f"{product}.jpg"
+
+if image_path.exists():
+    st.image(str(image_path), caption=product, use_column_width="always")
+else:
+    st.info("No image available for this product.")
+
 # === Category and Manufacturer ===
 manufacturer = df[df['name_clean'] == product]['manufacturer'].dropna().unique()
-
 st.markdown(f"**Manufacturer:** {manufacturer[0] if len(manufacturer) > 0 else 'N/A'}")
 
 # === Collapsible GPT summaries ===
