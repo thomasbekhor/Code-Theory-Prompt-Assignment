@@ -38,7 +38,7 @@ This app reflects prompts from Code and Theory's job brief:
 ## 🚀 Live Demo
 
 > [🌐 View the live Streamlit app](https://your-app-name.streamlit.app)  
-> [https://code-theory-prompt-assignment.streamlit.app/]
+> https://code-theory-prompt-assignment.streamlit.app/
 
 ---
 
