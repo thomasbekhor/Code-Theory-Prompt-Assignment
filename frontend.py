@@ -24,6 +24,14 @@ product = st.sidebar.selectbox(
     "Select a product",
     sorted(df['name_clean'].dropna().unique())
 )
+products = sorted(df['name_clean'].dropna().unique())
+default_product = "Kindle Oasis"  # substitua pelo produto que quiser
+
+product = st.sidebar.selectbox(
+    "Select a product",
+    products,
+    index=products.index(default_product)
+)
 
 # === Year-Month or All Time Filter ===
 # Get available periods
