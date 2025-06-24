@@ -4,10 +4,12 @@ import json
 import plotly.express as px
 import plotly.graph_objects as go
 
-# === Load Data ===
-df = pd.read_csv(r"C:\Users\tbekho01\OneDrive - Kearney\Documents\Insper\C&T Application\amazon_reviews_selected.csv")
-with open(r"C:\Users\tbekho01\OneDrive - Kearney\Documents\Insper\C&T Application\amazon_reviews_summary_with_gpt.json") as f:
+# ✅ Load local files (relative paths)
+df = pd.read_csv("amazon_reviews_selected.csv")
+
+with open("amazon_reviews_summary_with_gpt.json", encoding="utf-8") as f:
     gpt_data = json.load(f)
+
 
 df['reviews.date'] = pd.to_datetime(df['reviews.date'], errors='coerce')
 df['name_clean'] = df['name_clean'].astype(str)
