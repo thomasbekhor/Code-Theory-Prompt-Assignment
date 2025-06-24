@@ -84,7 +84,6 @@ st.markdown('<h1 class="title">📚✨ Product Reviews Explorer</h1>', unsafe_al
 st.markdown('<p class="subtitle">Deep insights powered by GPT & interactive visualizations</p>', unsafe_allow_html=True)
 
 # === Category and Manufacturer ===
-category = df[df['name_clean'] == product]['categories'].dropna().unique()
 manufacturer = df[df['name_clean'] == product]['manufacturer'].dropna().unique()
 
 st.markdown(f"**Category:** {category[0] if len(category) > 0 else 'N/A'}")
